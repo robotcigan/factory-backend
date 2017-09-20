@@ -1,0 +1,74 @@
+extends layout.pug
+
+
+block content
+  .inner-wall(style="background-image: url('./img/inner-image.jpg')")
+    .inner-wall__container
+      .grid.grid--container
+        h1.h1.inner-wall__title= title
+  
+  .grid.grid--container
+    .inner
+      .row
+        .col.col--lg-8
+          .news.row
+            - for (var i = 0; i < 2; i++)
+              .col.col--md-6
+                a(href="").new
+                  .new__img(style="background-image: url(./img/news-1.jpg)")
+                  .new__container
+                    .new__title Равнение на чистый алюминий
+                    .new__anons Продукция предприятия под брендом «MDS» поставлялась в Россию, Америку и в страны Европы – Великобританию и Польшу.
+                  .new__date 12 августа
+              .col.col--md-6
+                a(href="").new
+                  .new__img(style="background-image: url(./img/news-2.jpg)")
+                  .new__container
+                    .new__title Новые станки для ЧПУ обработки
+                    .new__anons Более современное оборудование позволит специалистам компании создавать металлические изделия на заказ в кратчайшие сроки
+                  .new__date 8 августа
+        .col.col--lg-3.col--lg-offset-1
+          .person
+            .person__img
+              img(src="./img/marketolog.jpg", alt="")
+            .person__name Смирнова Любовь
+            .person__role Cекретарь
+            .person__phone +7 48236 4-64-67
+
+
+  #vacancy.modal
+    .modal__title Откликнуться на вакансию
+    .modal__plate Мастер участка механаобработки
+    form.form
+      .form-control
+        label Как вас зовут?
+        input(type="text")
+      .form-control
+        label Телефон
+        input(type="tel").phone-mask
+      .form-control
+        label Город
+        input(type="text")
+      .checkbox.mini-offset
+        input(type="checkbox" id="checkbox")
+        label(for="checkbox").checkbox__label
+        label.checkbox__text(for="checkbox") Я согласен на обработку 
+          a(href="").link персональных данных
+      .row
+        .col.col--sm-6
+          .form-control
+            input(type="text")
+        .col.col--sm-6
+          img(src="./img/captcha.png", alt="")
+      .row.row--sm-center
+        .col.col--sm-6
+          label.show-more.file-upload
+            .show-more__icon
+              img(src="./img/show-more.png", alt="")
+            .show-more__text Приложить анкету
+            input(type="file")
+        .col.col--sm-6
+          a(href="/anketa.doc" download).link Скачать образец анкеты
+      button.btn Откликнуться
+
+

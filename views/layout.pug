@@ -1,0 +1,152 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    title МДС-МИКРО
+    meta(name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="format-detection" content="telephone=no")
+    link(rel="stylesheet", href="/styles/css/vendor.css")
+    link(rel="stylesheet", href="/styles/css/main.css")
+  body
+    
+    header.mobile-header
+      .grid.grid--container
+        .row.row--sm-center
+          .col.col--xs-12
+            a(href="/").logo
+                .logo__icon.main-header__logo
+                .logo__text МДС-МИКРО
+          .col.col--xs
+            .mobile-menu-toggle
+              span
+              span
+              span
+
+    .mobile-menu
+      .grid.grid--container
+        .mobile-menu__links
+          .mobile-menu__link
+            a(href="") О компании
+          .mobile-menu__link
+            a(href="") Продукция и услуги
+          .mobile-menu__link
+            a(href="") Новости
+          .mobile-menu__link
+            a(href="") Вакансии
+          .mobile-menu__link
+            a(href="") Контакты
+        a(href="").btn Оставить заявку
+        .contact
+          a(href="tel:+74959643075").contact__phone +7 /495/ 96-43-075
+          .contact__mode Режим работы: с 08:30 до 20:00
+
+    .headers
+      .grid.grid--container
+        header.main-header
+          .row.row--sm-center
+            .col.col--xl-6.col--sm-3
+              a(href="/").logo
+                .logo__icon.main-header__logo
+                .logo__text МДС-МИКРО
+            .col.col--xl-3.col--sm-5
+              .main-header__mode Режим работы: с 08:30 до 20:00
+            .col.col--xl-3.col--sm-4
+              a(href="tel:+74959643075").main-header__phone +7 /495/ 96-43-075
+
+        .nav-container
+          nav.nav
+            a(href="about").nav__link О компании
+            a(href="inner").nav__link Продукция и услуги
+            a(href="news").nav__link Новости
+            a(href="vacancies").nav__link Вакансии
+            a(href="contacts").nav__link Контакты
+            a(href="#callback").btn.nav__btn.modal-open Оставить заявку
+
+
+    block content
+
+    footer.main-footer
+      .grid.grid--container
+        .row
+          .col.col--md-4
+            a(href="").main-footer__header-link Услуги
+            .main-footer__block
+              a(href="").main-footer__link Листообработка
+              a(href="").main-footer__link Механообработка
+              a(href="").main-footer__link Продажа микродвигателей
+              a(href="").main-footer__link Слесарная обработка
+              a(href="").main-footer__link Металлообработка  ЧПУ
+              a(href="").main-footer__link Изготовление деталей  на станках с ЧПУ
+              a(href="").main-footer__link Термообработка
+            a(href="").main-footer__header-link Доставка и оплата
+          .col.col--md-4
+            a(href="").main-footer__header-link О компании
+            .main-footer__block
+              a(href="").main-footer__link Новости
+              a(href="").main-footer__link Часто задаваемые вопросы
+              a(href="").main-footer__link Вакансии
+              a(href="").main-footer__link Обработка персональных данных
+            a(href="").main-footer__header-link Контакты
+            a(href="").main-footer__header-link Карта сайта
+          .col.col--md-4
+            .main-footer__block
+              a(href="").main-footer__header-link Представительство
+              p.main-footer__info 107023, Россия, г.Москва, ул. Площадь Журавлева 2, стр. 2. Офис 303, Офис 307
+              p.main-footer__info Тел. 8 (495) 96-43-075
+              p.main-footer__info Эл. почта: 
+                a(href="mailto:yauza-motors2-8@mail.ru").link yauza-motors2-8@mail.ru
+            a(href="").main-footer__header-link Производство
+            p.main-footer__info 171505, Россия,Тверская обл., г.Кимры, ул. Старозаводская, 13
+            p.main-footer__info Эл. почта: 
+              a(href="mailto:info@mds-micro.ru").link info@mds-micro.ru
+        .main-footer__bottom
+          .row
+            .col.col--md-8
+              .wf Создание сайта - 
+                a(href="").link Webformula
+            .col.col--md-4
+              .copy &copy; Copyright 2017. Все права защищены
+
+
+    #callback.modal
+      .modal__title Заявка
+      form.form
+        .form-control
+          label Интересующее оборудование или услуги
+          input(type="text")
+        .form-control
+          label Как вас зовут?
+          input(type="text")
+        .form-control
+          label Телефон
+          input(type="tel").phone-mask
+        .form-control
+          label Электронная почта
+          input(type="email")
+        .form-control
+          label Название компании
+          input(type="text")
+        .form-control
+          label Город
+          input(type="text")
+        .checkbox.mini-offset
+          input(type="checkbox" id="checkbox")
+          label(for="checkbox").checkbox__label
+          label.checkbox__text(for="checkbox") Я согласен на обработку 
+            a(href="").link персональных данных
+        .row
+          .col.col--sm-6
+            .form-control
+              input(type="text")
+          .col.col--sm-6
+            img(src="./img/captcha.png", alt="")
+        button.btn Отправить
+
+    script(src="./js/jquery.min.js")
+    script(src="./js/jquery.easeScroll.js")
+    script(src="./js/slick.min.js")
+    script(src="./js/jquery.inputmask.bundle.min.js")
+    script(src="./js/jquery.magnific-popup.min.js")
+    script(src="./js/sticky.js")
+    script(src="./js/main.js")

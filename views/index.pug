@@ -1,0 +1,130 @@
+extends layout.pug
+
+
+block content
+  .hero
+    .hero__video
+      video(autoplay loop poster="./video/main.jpg")
+        source(src="./video/main.mp4" type="video/mp4")
+        source(src="./video/main.ogv" type="video/ogv")
+        source(src="./video/main.webm" type="video/webm")
+        source(src="./video/main.mov" type="video/mov")
+
+    .grid.grid--container.hero__container
+      .hero__content
+        .logo
+          .logo__icon.main-header__logo
+          h1.logo__text МДС-МИКРО
+        .hero__subtitle Производим путевой механизированный инструмент для железных дорог, электрогенераторы и сварочные агрегаты бытового и промышленного назначения.
+  
+  .grid.grid--container
+    .index
+      section.index__section.index__section--about
+        h2.h2.mini-offset О заводе
+        .row
+          .col.col--md-8
+            p.p.about Производственное предприятие ОАО «МДС-МИКРО» было образовано <br> в ноябре 1995 года на базе модельного цеха Савеловского машиностроительного завода.
+        .row
+          .col.col--xl-6.col--sm-7
+            .info-items
+              .row
+                .col.col--sm-6
+                  .info
+                    .info__container
+                      .info__number 20
+                      .info__text лет
+                    .info__subtitle Успешной работы
+                .col.col--sm-6
+                  .info
+                    .info__container
+                      .info__number 168
+                      .info__text станков
+                    .info__subtitle В станочном парке завода
+            p.p Основным видом деятельности первоначально являлся выпуск микродвигателей внутреннего сгорания для нужд РОСТО (ДОСААФ) <br> РФ и частных лиц.
+            p.p В сентябре 1999 года предприятие было преобразовано в открытое акционерное общество «МДС-микро» и в течение ряда лет занимало лидирующие позиции по изготовлению микродвигателей внутреннего сгорания, применяемые в авиа-судо и автомоделизме. На заводе выпускались не только уже отработанные типы калильных двигателей, но и велся большой объем НИОКР.
+            p.p Продукция предприятия под брендом «MDS» поставлялась в Россию, Америку и в страны Европы – Великобританию и Польшу.
+            a(href="").btn.btn--small Подробнее
+          .col.col--xl-6.col--sm-5
+            .index__info-img
+              img(src="./img/index-1.jpg", alt="")
+              .info
+                .info__container
+                  .info__number 84
+                  .info__text сотрудника
+                .info__subtitle Работают на заводе
+      section.index__section.index__section--services
+        .row
+          .col.col--xl-4
+            h2.h2 Услуги
+            i.i Стоимость услуг металлообработки рассчитывается индивидуально для каждого клиента.
+          - var services = ["Листообработка", "Механообработка", "Слесарная обработка", "Производство микродвигателей", "Термобработка"]
+          - for(var i = 1; i < 6; i++)
+            .col.col--lg-4.col--sm-6
+              a.service(href="" style="background-image: url(./img/service/" + i + ".jpg)")
+                .service__container
+                  .service__title #{services[i - 1]}
+                  .service__btn
+                    i.fa.fa-angle-right
+          .col.col--lg-4.col--sm-6.col--xl-offset-4
+            a.service(href="" style="background-image: url(./img/service/" + i + ".jpg)")
+              .service__container
+                .service__title Другие услуги
+                .service__btn
+                  i.fa.fa-angle-right
+      section.index__section.index__section--progress
+        h2.h2.big-offset Рабочий процесс
+        .row
+          .col.col--md-4
+            .text-center
+              img(src="./img/main-1.png", alt="").main-page-img
+          .col.col--md-4
+            h4.h4 Изготовление деталий и изделий по чертежам и экскизам Заказчика
+            p.p Основным видом деятельности первоначально являлся выпуск микродвигателей внутреннего сгорания для нужд РОСТО (ДОСААФ) РФ и частных лиц.
+          .col.col--md-4
+            .text-center
+              img(src="./img/main-3.png", alt="").main-page-img
+          .medium-offset
+          .col.col--md-4
+            h4.h4 Конструкторно-технологический отдел
+            p.p Основным видом деятельности первоначально являлся выпуск микродвигателей внутреннего сгорания для нужд РОСТО (ДОСААФ) РФ и частных лиц.
+          .col.col--md-4
+            .text-center
+              img(src="./img/main-2.png", alt="").main-page-img
+          .col.col--md-4
+            h4.h4 Изготовление по образцам или техническому заданию
+            p.p Основным видом деятельности первоначально являлся выпуск микродвигателей внутреннего сгорания для нужд РОСТО (ДОСААФ) РФ и частных лиц.
+      section.index__section.index__section--news
+        h2.h2 Новости
+        .news.news--index.row
+          .col.col--md-4
+            a(href="").new
+              .new__img(style="background-image: url(./img/news-1.jpg)")
+              .new__container
+                .new__title Равнение на чистый алюминий
+                .new__anons Продукция предприятия под брендом «MDS» поставлялась в Россию, Америку и в страны Европы – Великобританию и Польшу.
+              .new__date 12 августа 2017
+          .col.col--md-4
+            a(href="").new
+              .new__img(style="background-image: url(./img/news-2.jpg)")
+              .new__container
+                .new__title Новые станки для ЧПУ обработки
+                .new__anons Более современное оборудование позволит специалистам компании создавать металлические изделия на заказ в кратчайшие сроки
+              .new__date 8 августа 2017
+          .col.col--md-4
+            a(href="").new
+              .new__img(style="background-image: url(./img/news-2.jpg)")
+              .new__container
+                .new__title Новые станки для ЧПУ обработки
+                .new__anons Более современное оборудование позволит специалистам компании создавать металлические изделия на заказ в кратчайшие сроки.
+              .new__date 31 июля 2017
+        a(href="").btn.btn--small Все новости
+
+
+
+
+
+
+
+
+
+

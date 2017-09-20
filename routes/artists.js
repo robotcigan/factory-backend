@@ -5,10 +5,6 @@ const router = express.Router();
 
 const Artist = require('../models/artist');
 
-router.get('/', (req, res) => {
-  res.send('Hello world');
-});
-
 // All aritsts with pagination parameters
 router.get('/artists', (req, res) => {
   let skip = 5;
