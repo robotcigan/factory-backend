@@ -1,0 +1,17 @@
+extends layout.pug
+
+
+block content
+  .inner-wall(style="background-image: url('./img/inner-image.jpg')")
+    .inner-wall__container
+      .grid.grid--container
+        h1.h1.inner-wall__title= title
+
+  .grid.grid--container
+    .inner
+      h2.h3 Ошибка 404
+      p.p Неправильно набран адрес, или такой страницы на сайте больше не существует.
+        br
+        | Вернуться на 
+        a(href="").link главную страницу
+
